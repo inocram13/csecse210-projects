@@ -1,16 +1,18 @@
 public class Entry
 {
+    public string _title;
     public string _date;
     public string _promptText;
     public string _entryText;
-    public string _title;
+    
 
-    public Entry(string date, string promptText, string entryText,string title)
+    public Entry(string title, string date, string promptText, string entryText)
     {
+        _title = title;
         _date = date;
         _promptText = promptText;
         _entryText = entryText;
-         _title = title;
+         
     }
 
     public void Display()
