@@ -15,3 +15,30 @@ public class Resume
     }
     
 }
+
+// public class Scripture
+// {
+//     private Reference _reference;
+//     private List<word> _words = new List<word>();
+//     public Scripture()
+//     {
+
+//     }
+//     public void HideRandomWord(int numberToHide)
+//     {
+
+//     }
+//     public string GetDisplayText()
+//     {
+
+//     }
+//     public bool IsCompletelyHidden()
+//     {
+
+//     }
+
+    
+
+
+    
+// }

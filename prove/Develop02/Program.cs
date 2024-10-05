@@ -33,7 +33,7 @@ class Program
                     Console.Write("Enter a title for your entry: ");
                     string title = Console.ReadLine();
 
-                    Entry newEntry = new Entry(DateTime.Now.ToString("yyyy-MM-dd"), prompt, response,title);
+                    Entry newEntry = new Entry(title, DateTime.Now.ToString("yyyy-MM-dd"), prompt, response);
                     theJournal.AddEntry(newEntry);
                     Console.WriteLine("Your entry has been saved!");
                     break;
