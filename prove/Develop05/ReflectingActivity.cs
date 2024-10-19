@@ -21,10 +21,38 @@ public class ReflectingActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
+    private List<string> _unusedPrompts;
+    private List<string> _unusedQuestions;
+    private Random _random;
     public ReflectingActivity() 
     : base ("Reflecting", "This activity will help you reflect on times when you have shown strength and resilience.", 50 )
     {
-       
+        _random = new Random();
+        ResetUnusedPrompts();
+        ResetUnusedQuestions();
+    }
+    public void ResetUnusedPrompts()
+    {
+         _unusedPrompts = new List<string>(_prompts);
+        Shuffle(_unusedPrompts);
+    }
+    private void ResetUnusedQuestions()
+    {
+        _unusedQuestions = new List<string>(_questions);
+        Shuffle(_unusedQuestions); 
+    }
+    private void Shuffle<T>(List<T> list)
+    {
+         Random rng = new Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
     }
     public void Run()
     {
@@ -35,13 +63,25 @@ public class ReflectingActivity : Activity
     }
     public string GetRandomPrompt()
     {
-        Random random = new Random();
-        return _prompts[random.Next(_prompts.Count)];
+       if (_unusedPrompts.Count == 0)
+        {
+            ResetUnusedPrompts();  // Reshuffle and reset when all are used
+        }
+
+        string prompt = _unusedPrompts[0];
+        _unusedPrompts.RemoveAt(0);  // Remove the used prompt
+        return prompt;
     }
     public string GetRandomQuestion()
     { 
-        Random random = new Random();
-        return _questions[random.Next(_questions.Count)];
+        if (_unusedQuestions.Count == 0)
+        {
+            ResetUnusedQuestions();  // Reshuffle and reset when all are used
+        }
+
+        string question = _unusedQuestions[0];
+        _unusedQuestions.RemoveAt(0);  // Remove the used question
+        return question;
     }
     public void DisplayPrompt()
     {
