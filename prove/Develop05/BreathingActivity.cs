@@ -7,6 +7,15 @@ public class BreathingActivity : Activity
     }
     public void Run()
     {
-
+        DisplayStartingMessage();
+        int halfDuration = _duration / 2;
+        for(int i = 0; i < halfDuration; i ++)
+        {
+            Console.WriteLine("Hinga......");
+            ShowCountDown(3);
+            Console.WriteLine("Buga......");
+            ShowCountDown(5);
+        }
+        DisplayEndMessage();
     }
 }
