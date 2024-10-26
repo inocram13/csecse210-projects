@@ -1,0 +1,6 @@
+SimpleGoal
+2: 3: 4 points (SimpleGoal)
+EternalGoal
+4 (Eternal)
+ChecklistGoal
+5 3 - Completed: False, 0/2

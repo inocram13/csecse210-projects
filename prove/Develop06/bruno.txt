@@ -1,0 +1,3 @@
+SimpleGoal:goal to walk everyday,walking daily to fit,10
+EternalGoal:whoanfafbksbaif,aihgiafbafaifa,10
+ChecklistGoal:ashfafna,afakfanfja,10,1000,0

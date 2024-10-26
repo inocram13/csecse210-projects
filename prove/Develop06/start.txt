@@ -1,0 +1,6 @@
+SimpleGoal:goal to walk everyday,walking daily to fit,10
+EternalGoal:whoanfafbksbaif,aihgiafbafaifa,10
+ChecklistGoal:ashfafna,afakfanfja,10,1000,0
+SimpleGoal:hakdog,kumain ng hakdog everyday always,10000000
+EternalGoal:unknown,sory to my unknown lover,10
+ChecklistGoal:save mo muna,pake mo ba? engot ka ba?,10,2,0
